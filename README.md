@@ -1,74 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+## User Management Tool
 
-## Available Scripts
+This system allows you to monitor and update users and groups
 
-In the project directory, you can run:
+## Features Available
+ 
+### Listing users & groups
 
-### `npm start`
+See the list of existing users and groups
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Add new user & groups
 
-The page will reload if you make edits.<br />
+You can add new users & group with the form at the end of the corresponding page
+
+### Assign users/ groups
+
+You can assign an existing user to a group or vice-versa with the input field at the listing
+
+### Delete from users/ groups
+
+You can remove a user from a group or vice-versa with the "-" button next to its name
+
+### Remove a user or group
+
+You can remove a user or group with the "-" button next to its name
+
+### Note:
+
+The application starts with some initial data - 2 users and 2 groups. "Admin" and "General" are part of the system maintenance and cannot be edited by the user.
+
+## Inital Setup
+
+### npm init
+
+Installs node modules and initializes the system
+
+### npm start
+
+Runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
 You will also see any lint errors in the console.
 
-### `npm test`
+## Known Errors
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Page Doesnt update when you remove a group member / user's group - If you navigate to the other page and return, you see it's actually updated although it doesn't reflect instantaneously.
 
-### `npm run build`
+### Occaisionally, the application crashes after adding a new user / group - Intermittent error, I was unable to reproduce it exactly. Please reload the page to start.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Implementation details
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This application uses the following - 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* React JS
+* Redux state management
+* React Router
+* Initial data - a JSON object
+* ES Lint - For linting
 
-### `npm run eject`
+## Planned Improvements 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-Todo -
-
-- Search Functionality
-- Make app work offline
-- Better styling
+* More extensive testing - using Enzyme
+* Offline capabilities with service workers
+* More extensive linting
